@@ -19,10 +19,10 @@ pipeline {
             git branch: "${params.BRANCH}", url: 'https://github.com/dzmitryrak/AllureReporting.git'
 
             // Run Maven on a Unix agent.
-            sh "mvn clean test"
+            //sh "mvn clean test"
 
             // To run Maven on a Windows agent, use
-            // bat "mvn -Dmaven.test.failure.ignore=true clean package"
+            bat "mvn -Dmaven=LoginTest"
          }
 
          post {
